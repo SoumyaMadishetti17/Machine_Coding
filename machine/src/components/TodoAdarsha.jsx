@@ -23,6 +23,11 @@ const TodoAdarsha = () => {
     }
   return (
     <div>
+        <div>
+            {/* create nav links of home archive */}
+
+
+        </div>
         <div className='todo-flex'>
             <div className='Todo-box'>
                 <input value={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder='Enter Todo Name...' />

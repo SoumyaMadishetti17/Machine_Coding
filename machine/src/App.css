@@ -11,7 +11,7 @@
   text-decoration: line-through;
 }
 .Todo-box{
-  margin-top: 10%;
+  margin-top: 5%;
   width: 350px;
   height: 400px;
   display: flex;
@@ -36,6 +36,7 @@ select{
 button{
   width: 150px;
   height: 40px;
+  cursor: pointer;
 }
 .Todo-table{
   width: 550px;
@@ -49,5 +50,19 @@ button{
   justify-content: space-between;
   align-items: center;
   gap: 1em;
-  margin: 5em;
+  margin: 3em;
+}
+nav{
+  width: 100vw;
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgb(210, 200, 200);
+}
+nav div{
+  cursor: pointer;
+  padding: 1em;
+  padding-left: 4.5em;
+  padding-right: 4.5em;
+  font-size: larger;
 }
