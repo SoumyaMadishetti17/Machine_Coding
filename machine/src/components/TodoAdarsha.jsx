@@ -23,7 +23,7 @@ const TodoAdarsha = () => {
     }
   return (
     <div>
-        <div>
+        <div className='Todo-box'>
             <input value={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder='Enter Todo Name...' />
             <select value={priority} onChange={(e)=>setPriority(e.target.value)}>
                 <option value="Low">Low</option>
