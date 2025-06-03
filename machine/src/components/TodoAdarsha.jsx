@@ -23,25 +23,37 @@ const TodoAdarsha = () => {
     }
   return (
     <div>
-        <div className='Todo-box'>
-            <input value={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder='Enter Todo Name...' />
-            <select value={priority} onChange={(e)=>setPriority(e.target.value)}>
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-            </select>
-            <button onClick={add}>Add Todo</button>
+        <div className='todo-flex'>
+            <div className='Todo-box'>
+                <input value={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder='Enter Todo Name...' />
+                <select value={priority} onChange={(e)=>setPriority(e.target.value)}>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <button onClick={add}>Add Todo</button>
+            </div>
+            <table className='Todo-table' style={{border:'1px solid white'}}>
+                <thead>
+                    <tr>
+                        <th>Name </th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {todos.map((ele)=>(
+                        <tr>
+                            <td> {ele.text} </td>
+                            <td> {ele.Priority} </td>
+                            <td> <button onClick={()=>toggleTodo(ele.id)}>{ele.completed ? 'Completed' : 'Pending'}</button>  </td>
+                            <td> <button onClick={()=>del(ele.id)}>Delete</button></td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
-        <ul>
-            {todos.map((ele)=>(
-                <li>
-                    <input type="checkbox" checked={ele.completed} onChange={(e)=>toggleTodo(ele.id)}/>
-                    <span>{ele.text} </span>
-                    <span>{ele.Priority} </span>
-                    <button onClick={()=>del(ele.id)}>Delete</button>
-                </li>
-            ))}
-        </ul>
     </div>
   )
 }

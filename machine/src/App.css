@@ -5,22 +5,24 @@
   background-color: black;
   color: #eae2e2;
   text-align: center;
-  font-size: medium;
+  font-size: 20px;
 }
 .completed {
   text-decoration: line-through;
 }
 .Todo-box{
-  margin-top: 20%;
+  margin-top: 10%;
   width: 350px;
   height: 400px;
   display: flex;
   flex-direction: column;
-  gap: 2.5em;
-  justify-content: center;
   align-items: center;
-
-  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #a6a2a2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(210, 200, 200);
+  gap: 2.5em;
   border: 2px solid whitesmoke;
 }
 input {
@@ -34,4 +36,18 @@ select{
 button{
   width: 150px;
   height: 40px;
+}
+.Todo-table{
+  width: 550px;
+}
+.Todo-table th,td{
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.todo-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  margin: 5em;
 }
