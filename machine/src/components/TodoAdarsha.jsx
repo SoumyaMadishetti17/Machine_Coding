@@ -15,6 +15,12 @@ const TodoAdarsha = () => {
         setInput('')
         setPriority('Low')
     }
+    const toggleTodo=(id)=>{
+        setTodos((prev)=>prev.map((ele)=>ele.id===id ? {...ele,completed:!ele.completed}:ele))
+    }
+    const del=(id)=>{
+        setTodos((prev)=>prev.filter((ele)=>ele.id!==id))
+    }
   return (
     <div>
         <div>
@@ -29,9 +35,10 @@ const TodoAdarsha = () => {
         <ul>
             {todos.map((ele)=>(
                 <li>
-                    <input type="checkbox" />
+                    <input type="checkbox" checked={ele.completed} onChange={(e)=>toggleTodo(ele.id)}/>
                     <span>{ele.text} </span>
                     <span>{ele.Priority} </span>
+                    <button onClick={()=>del(ele.id)}>Delete</button>
                 </li>
             ))}
         </ul>
