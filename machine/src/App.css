@@ -79,6 +79,10 @@ nav div{
   height: 300px;
   min-height: 325px;
   overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
 
 }
 .diver li{

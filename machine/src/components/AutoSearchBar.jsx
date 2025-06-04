@@ -26,13 +26,17 @@ const AutoSearchBar = () => {
         const debounce = setTimeout(getData,300)
         return () =>clearTimeout(debounce)
     },[input])
+    const handSelect=(name)=>{
+        setInput(name)
+        setshowres(false)        
+    }
   return (
-    <div>
+    <div className='main-div'>
         <h1>AutoSearchBar</h1>
         <input value={input}
             onChange={(e)=>setInput(e.target.value)}
             onFocus={()=>setshowres((prev)=>!prev)}
-            onBlur={()=>setTimeout(()=>setshowres((prev)=>!prev),200)  }
+            onBlur={()=>setTimeout(()=>setshowres(false),200)  }
             type="text"
             placeholder='Search recipe ....'
             aria-label='Search recipe'
@@ -40,7 +44,9 @@ const AutoSearchBar = () => {
         {showres && (
             <div className='diver'>
                 {data.map((ele)=>(
-                    <li key={ele.id}>{ele.name} </li>
+                    <li key={ele.id}
+                        onMouseDown={()=>handSelect(ele.name)}
+                    >{ele.name} </li>
                 ))}
             </div>
         ) }        
@@ -49,3 +55,8 @@ const AutoSearchBar = () => {
 }
 
 export default AutoSearchBar
+// onBlur on the input triggers first and starts a setTimeout(() => setshowres(false), 200)
+
+// Then onClick on the <li> fires.
+
+// But React batches these, and sometimes the dropdown gets hidden before the onClick executes properly.
