@@ -38,24 +38,24 @@ button{
   height: 40px;
   cursor: pointer;
 }
-.Todo-table{
+.Todo-table,.Todo-table-archive{
   width: 550px;
 }
-.Todo-table th,td{
+.Todo-table,.Todo-table-archive ,th,td{
   padding: 10px;
   border: 1px solid #ccc;
 }
 .todo-flex{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 1em;
-  margin: 3em;
+  /* gap: 2em; */
+  margin:3em;
 }
 nav{
   width: 100vw;
   display: flex;  
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 0 0 10px rgb(210, 200, 200);
 }
@@ -65,4 +65,24 @@ nav div{
   padding-left: 4.5em;
   padding-right: 4.5em;
   font-size: larger;
+}
+.Todo-table-archives{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  margin: 5em;
+}
+.diver{
+  width: 500px;
+  height: 300px;
+  min-height: 325px;
+  overflow: hidden;
+
+}
+.diver li{
+  list-style: none;
+  padding: 0.8em;
+  border: 1px solid #ccc;
 }
