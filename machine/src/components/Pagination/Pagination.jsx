@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import DefaultPagination from './DefaultPagination'
 
 const Pagination = () => {
     const [data,setData]=useState([])
@@ -25,26 +26,18 @@ const Pagination = () => {
     const start=curr_page*pro_per_page
     const end=start+pro_per_page   
 
-    const handleSelect=(n)=>{
-        setCurr_page(n)        
-    }
-    const gotoPrev=()=>{
-        setCurr_page((prev)=>prev-1)        
-    }
-    const gotoNext=()=>{
-        setCurr_page((prev)=>prev+1)        
-    }
   return (
     <div>
         <h1>Pagination</h1>
         <div >
-            <div>
+            {/* <div>
                 <button disabled={curr_page===0} onClick={()=>gotoPrev()}>◀️</button>
                 {[...Array(no_of_pages).keys()].map((n)=>(
                     <button key={n} className={curr_page===n ? 'active':''} onClick={()=>handleSelect(n)}>{n}</button>
                 ))}
                 <button disabled={curr_page===(no_of_pages-1)} onClick={()=>gotoNext()}>▶️</button>
-            </div>
+            </div> */}
+            <DefaultPagination curr_page={curr_page} no_of_pages={no_of_pages} setCurr_page={setCurr_page} />
             <div className='container'>
                 {data.slice(start,end).map((ele)=>(
                     <div key={ele.id} className='card'>
