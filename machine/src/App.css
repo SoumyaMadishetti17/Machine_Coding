@@ -1,4 +1,4 @@
-*{
+/* *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -49,7 +49,6 @@ button{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* gap: 2em; */
   margin:3em;
 }
 nav{
@@ -79,14 +78,27 @@ nav div{
   height: 300px;
   min-height: 325px;
   overflow: hidden;
-  position: absolute;
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-
 }
 .diver li{
   list-style: none;
   padding: 0.8em;
   border: 1px solid #ccc;
 }
+.main-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  margin: 0 auto;
+} */
+ *{
+  box-sizing: border-box;
+ }
+ .ul{
+  border: 1px solid black;
+  padding: 0.5em;
+  margin: 0 auto;
+  width: 500px;
+  font-size: large;
+  margin-bottom: 10px;
+ }
