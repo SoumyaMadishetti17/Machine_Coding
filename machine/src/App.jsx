@@ -8,6 +8,8 @@ import Todos from './components/Todos'
 import { Route,Routes } from 'react-router-dom'
 import AutoSearchBar from './components/AutoSearchBar'
 import Form from './components/Form'
+import StopWatch from './components/StopWatch'
+import Pagination from './components/Pagination/Pagination'
 
 function App() {
   const [archives,setarchives]=useState([])
@@ -20,7 +22,7 @@ function App() {
         <Route path='/archive' element={<Archive archives={archives} />} />
         
       </Routes> */}
-      <Form/>
+      <Pagination/>
     </>
   )
 }

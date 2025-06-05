@@ -93,6 +93,9 @@ nav div{
 } */
  *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
  }
  .ul{
   border: 1px solid black;
@@ -101,4 +104,34 @@ nav div{
   width: 500px;
   font-size: large;
   margin-bottom: 10px;
+ }
+ .card{
+  width: 300px;  
+  border: 1px solid black;  
+  padding: 0.5em;
+  border-radius: 2em;
+  font-size: large;
+}
+ .card img{
+  width: 200px;
+ }
+ h1{
+  font-size: 3em;
+ }
+ .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em;
+  margin: 0 auto;
+  gap: 1.5em;
+
+ }
+ button{
+  padding: 0.5em;
+ }
+ .active{
+  background-color: #60c0e0;
  }
