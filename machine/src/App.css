@@ -91,7 +91,8 @@ nav div{
   padding: 2em;
   margin: 0 auto;
 } */
- *{
+ /* pagination */
+ /* *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -134,4 +135,38 @@ nav div{
  }
  .active{
   background-color: #60c0e0;
- }
+ } */
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .card{
+    width: 300px;
+    border: 1px solid black;
+    padding: 0.5em;
+    border-radius: 2em;
+    font-size: large;
+
+  }
+  .card img{
+    width: 200px;
+    }
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em;
+    gap: 1.5em;
+
+  }
+  button{
+    padding: 0.5em;
+    margin: 2px;
+  }
+  .active{
+    background-color: #60c0e0;
+    }

@@ -10,6 +10,7 @@ import AutoSearchBar from './components/AutoSearchBar'
 import Form from './components/Form'
 import StopWatch from './components/StopWatch'
 import Pagination from './components/Pagination/Pagination'
+import Paginationsim from './components/Paginationsim'
 
 function App() {
   const [archives,setarchives]=useState([])
@@ -22,7 +23,7 @@ function App() {
         <Route path='/archive' element={<Archive archives={archives} />} />
         
       </Routes> */}
-      <Pagination/>
+      <Paginationsim/>
     </>
   )
 }
