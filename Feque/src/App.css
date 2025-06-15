@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,13 +13,13 @@
   padding: 1em;
   box-shadow: 0 0 10px rgba(0,0,0,0.6)
   
-  /* box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 5px rgb(48, 46, 46), -2px -2px 5px rgb(210, 210, 222);
-  transition: box-shadow 0.3s ease-in-out; */
+  transition: box-shadow 0.3s ease-in-out;
 }
 .card:hover{
-  /* box-shadow: 4px 4px 15px 0px rgba(0,  0, 0, 0.2);
-  box-shadow: 2px 2px 5px rgb(48, 46,  46), -2px -2px 5px rgb(210, 210,  222); */
+  box-shadow: 4px 4px 15px 0px rgba(0,  0, 0, 0.2);
+  box-shadow: 2px 2px 5px rgb(48, 46,  46), -2px -2px 5px rgb(210, 210,  222);
   transform: scale(1.05);
   }
 .card img{
@@ -51,4 +51,4 @@ button{
   background-color: #151815;  
   color: white;
   cursor: pointer;  
-}
+} */
